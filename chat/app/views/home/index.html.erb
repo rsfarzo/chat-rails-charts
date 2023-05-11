@@ -1,15 +1,17 @@
 Welcome
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-
+<%= csrf_meta_tag %>
 <input id="myInput" value="Chicago">type some text, then press Enter/Return
 <div id="log">
 </div>
 <script>
+    var token = document.getElementsByName('csrf-token')[0].content;
+    $.ajaxSetup({headers:{'X-CSRF-Token': token }});
     $("#myInput").on("keypress", function(e){
         if(e.which == 13){
-            $("#log").append( "<i>You</i>: "+ $("#myInput").val() +"<br>");
-            $.post("demo_test_post.asp",
+            $("#log").append( "<i>You said</i>: "+ $("#myInput").val() +"<br>");
+            $.post("/req",
                    { name: "Donald Duck", city: $("#myInput").val() },
                    function(data,status){
                        $("#log").append( "<i>Bot</i>: "+ data +"<br>"); 
@@ -18,4 +20,3 @@ Welcome
         }
     });
 </script>
-
