@@ -4,5 +4,4 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   root to: "home#index" 
   post '/req', to: 'home#req'
-  get '/req', to: 'home#req'
 end
