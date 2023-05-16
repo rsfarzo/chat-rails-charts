@@ -17,6 +17,7 @@
         if(e.which == 13){
             $("#log").append( "<i>You said</i>: "+ $("#myInput").val() +"<br>");
             $("#spin").addClass("spinner-border");
+            <% flash[:notice] = "Your profile has been updated." %>
             $.post("/req",
                    { name: "Donald Duck", city: $("#myInput").val() },
                    function(data,status){
