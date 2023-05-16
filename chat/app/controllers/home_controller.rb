@@ -1,6 +1,9 @@
-class HomeController < ActionController::Base
+class HomeController < ApplicationController #ActionController #::Base
     def index
        render # views/home/index.html.erb
+    end
+    def chat
+        render # views/home/chat.html.erb
     end
     def req
         name=params[:name]
