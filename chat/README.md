@@ -1,24 +1,5 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# JS
 
-Things you may want to cover:
+If you find that your chart is hung loading JS, there woulbd be a 'loading...' message in lieu of your chart.  Try adding `<%= javascript_include_tag "//www.google.com/jsapi", "chartkick" %>` in your `layouts/application.html.erb` and then `//= link chartkick.js` into `config/manifest.js`
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
