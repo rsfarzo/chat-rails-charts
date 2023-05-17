@@ -3,4 +3,21 @@ Chart:
 <%= line_chart [
   {name: "Workout", data: {"2021-01-01" => 3, "2021-01-02" => 4}},
   {name: "Call parents", data: {"2021-01-01" => 5, "2021-01-02" => 3}}
-] %>
+] 
+%>
+<%= candlestick_chart({
+    '2017-10-24' => [20, 34, 10, 38],
+    '2017-10-25' => [40, 35, 30, 50],
+    '2017-10-26' => [31, 38, 33, 44],
+    '2017-10-27' => [38, 15, 5, 42]
+  },
+  class: 'box',
+  theme: 'roma',
+  options: {
+    xAxis: {
+      axisTick: {
+        alignWithLabel: true
+      }
+    }
+  })
+%>
