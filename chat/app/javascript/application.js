@@ -7,8 +7,10 @@ Turbo.session.drive = true
 import "chartkick"
 import "Chart.bundle"
 
-import 'jquery'
+//import 'jquery'
 
-import * as bootstrap from 'bootstrap'
-window.bootstrap = bootstrap
+//import * as bootstrap from 'bootstrap'
+//window.bootstrap = bootstrap
 
+import "chartkick"
+import "Chart.bundle"
