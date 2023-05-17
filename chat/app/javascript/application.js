@@ -4,8 +4,11 @@ import "controllers"
 import { Turbo } from "@hotwired/turbo-rails"
 Turbo.session.drive = true
 
+import "chartkick"
+import "Chart.bundle"
 
 import 'jquery'
 
 import * as bootstrap from 'bootstrap'
 window.bootstrap = bootstrap
+
